@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(240, 183, 78);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#best-score-container{
+    font-size: 40px;
+    margin-bottom: 45px;
+}
+
+#image-container {
+    display: flex;
+    font-size: 30px;
+    margin-top: 5px; 
+    align-items: center; 
+}
+
+#image-container > img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#image-container > #timer-image{
+    display: flex;
+    align-items: center; 
+}
+
+#image-container > #timer-image > img {
+    width: 45px;
+    height: 45px;
+    margin-left: 40px;
+}
+
+#answer-information-container {  
+    background-color: rgb(199, 199, 199); 
+    border: 2px solid white; 
+    width: 500px;
+    height: 170px;
+    text-align: center;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+#answer-information-container > p{
+    margin: 10px;
+}
+
+#answer-information-container > img {
+    width: 50px; 
+    height: 50px; 
+    margin-top: 5px;
+}
+
+#answer-information{
+    font-size: 25px;
+}
+
+#answer-score-information{
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#equation-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+#equation {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    margin-bottom: 4px;
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+    margin-top: 1px;
+}
+
+#answer {
+    background-color: rgb(183, 252, 71);
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    border: 2px solid white;
+    width: 70%;
+}
+
+#bottom {
+    display: flex;
+    font-size: 25px;
+}
+
+#answer-button, #new-game-button {
+    background-color: #019155;
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 35px;
+}
+
+#new-game-button{
+    width: 500px;
+    height: 65px;
+    background-color: #081ac0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-information {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 30px; 
+    text-align: center; 
+}
+
+#score{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#level{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#level-paragraph{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#score-paragraph{
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    margin-top: 15px;
+    height: 100px; 
+    padding: 5px; 
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#level-buttons-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    margin-top: 15px;
+    height: 100px; 
+    padding: 5px; 
+    gap: 15px;
+    margin-top: 25px;
+}
+
+#level-buttons-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #301885;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}

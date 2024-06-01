@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Math Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div class="button-container">
+        <button id="addition-operation">Dodawanie</button>
+        <button id="subtraction-operation">Odejmowanie</button>
+        <button id="multiplication-operation">Mnożenie</button>
+        <button id="division-operation">Dzielenie</button>
+        <button id="all-operation">Wszystkie</button>
+    </div>    
+    <div id="image-container">
+        <p>Życia: <span id="lifes"></span></p>
+        <img id="image-heart-1" src="https://cdn.pixabay.com/photo/2014/04/02/10/47/red-304570_640.png" alt="Heart 1">
+        <img id="image-heart-2" src="https://cdn.pixabay.com/photo/2014/04/02/10/47/red-304570_640.png" alt="Heart 2">
+        <img id="image-heart-3" src="https://cdn.pixabay.com/photo/2014/04/02/10/47/red-304570_640.png" alt="h2 3">
+        <span id="timer-image"><img id="image-stoper" src="https://cdn.pixabay.com/photo/2013/07/12/17/21/clock-152067_1280.png" alt="timer">:<span id="timer-text"></span></span>
+    </div>   
+    
+    <div id="answer-information-container">
+        <img id="happy-face" src="https://cdn.pixabay.com/photo/2014/03/14/15/01/emoticon-287178_1280.png" alt="h2 3">
+        <img id="sad-face" src="https://cdn.pixabay.com/photo/2016/05/14/18/23/emoticon-1392275_1280.png" alt="h2 3">
+        <p id="answer-information"></p>       
+        <p id="answer-score-information"></p>         
+    </div> 
+
+    <div id="equation-container">
+        <span id="equation"></p>
+    </div>
+
+    <input type="text" id="answer" autofocus placeholder="Podaj odpowiedź">
+    <button id="answer-button">Sprawdź odpowiedź</button>
+    <button id="new-game-button">Nowa gra</button>
+    <div id="bottom">
+        <p id="score-paragraph"><b>Punkty:</b> <span id="score">0</span></p>                
+        <p id="level-paragraph"><b>Poziom:</b> <span id="level">1</span></p>
+        <p id="operation-paragraph"><b>Tryb:</b> <span id="operation">1</span></p>
+    </div>
+    <div id="best-score-container">
+        <span><b>Najlepszy wynik: </b><span id="best-score"></span></span>
+    </div>
+    <div id="level-buttons-container">
+        <button id="fisrt-level">Tylko poziom 1</button>
+        <button id="second-level">Tylko poziom 2</button>
+        <button id="raising-level">Poziom wzrasta</button>
+    </div>
+    <p id="game-information">Gracz ma 3 życia(serduszka). Za złą odpowiedź traci serduszko i traci -1 punkt, 
+        gdy gracz nie ma serduszek przegrywa. Czas na odpowiedź to 7 sekund. Za poprawną odpowiedź gracz otrzymuje +1 punkt, celem gry jest
+    zdobycie jak największej ilości punktów.</p> 
+    <script src="script.js"></script>
+</body>
+</html>
