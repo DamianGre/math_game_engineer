@@ -300,14 +300,12 @@ function generateEquation() {
             generateEquation();    
         } 
     }
-}   
-     
-
-
+}       
 
 function startNewGame() {      
     lifes = 3;
-    score = 0;    
+    score = 0;  
+    level = 1;  
     document.getElementById('score').innerText = score;
     document.getElementById('new-game-button').style.display = 'none'; 
     document.getElementById('answer-information-container').style.display = 'none'; 
@@ -337,9 +335,11 @@ function endGame() {
 }
 
 function checkAnswer() {
-    console.log('sprawdzam odpowiedź')    
+    console.log('sprawdzam odpowiedź') 
 
-    const answer = Number(document.getElementById('answer').value)
+    const inputValue = document.getElementById('answer').value;
+    const answer = inputValue === "" ? NaN : Number(inputValue);
+    
     if (answer === correctAnswer) {   
         document.getElementById('answer-information-container').style.display = 'none';     
         document.getElementById('sad-face').style.display = 'none';
@@ -454,7 +454,7 @@ function timerInterval(){
         
 
         if(onlyLevel == 3){
-            document.getElementById('level').innerText = level;
+            document.getElementById('level').innerText = 'wzrastający: ' + level;
         }else{
             document.getElementById('level').innerText = 'tylko poziom ' + onlyLevel;
         }
