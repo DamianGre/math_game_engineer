@@ -2,7 +2,7 @@ let score = 0;
 let correctAnswer;
 let equationTxt = ``;
 let level = 1;
-let onlyLevel = 3;
+let onlyLevel = 5;
 let lifes = 3;
 let operationType = 4;
 let bestScore;
@@ -33,38 +33,63 @@ function generateEquation() {
     
     if(operationType == 0){
         let number1; 
-        let number2; 
-
-        if(onlyLevel == 1){
-            number1 = Math.floor(Math.random() * 4);
-            number2 = Math.floor(Math.random() * 4);
-        }else if(onlyLevel == 2){
-            number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-        }else if(onlyLevel == 3){
-            if(level == 1){
-                number1 = Math.floor(Math.random() * 4);
-                number2 = Math.floor(Math.random() * 4);
-            }else if(level == 2){
-                number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-            }else if(level == 3){
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            } 
-            else{
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            }           
-        }
-
+        let number2;
+        let equation;  
+        
         operators = ['+', '-', '*', '/'];
-        const operator = operators[operationType];      
+        const operator = operators[operationType]; 
+        
+        switch(level){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };
 
-        let equation = number1 + " " + operator + " " + number2 + ' = ?';
+        switch(onlyLevel){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };
+       
+        equation = number1 + " " + operator + " " + number2 + ' = ?';
         equationTxt = `${number1} ${operator} ${number2}`;
 
         correctAnswer = Number(number1) + Number(number2);
+
 
         document.getElementById('equation').innerText = equation;        
 
@@ -74,39 +99,63 @@ function generateEquation() {
     }
     else if(operationType == 1){
         let number1; 
-        let number2; 
-
-        if(onlyLevel == 1){
-            number1 = Math.floor(Math.random() * 4);
-            number2 = Math.floor(Math.random() * 4);
-        }else if(onlyLevel == 2){
-            number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-        }else if(onlyLevel == 3){
-            if(level == 1){
-                number1 = Math.floor(Math.random() * 4);
-                number2 = Math.floor(Math.random() * 4);
-            }else if(level == 2){
-                number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-            }else if(level == 3){
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            } 
-            else{
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            }           
-        }
-
+        let number2;
+        let equation;  
+        
         operators = ['+', '-', '*', '/'];
-        const operator = operators[operationType];      
+        const operator = operators[operationType]; 
+        
+        switch(level){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };
 
-        let equation = number1 + " " + operator + " " + number2 + ' = ?';
-
+        switch(onlyLevel){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };
+       
+        equation = number1 + " " + operator + " " + number2 + ' = ?';
         equationTxt = `${number1} ${operator} ${number2}`;
 
         correctAnswer = Number(number1) - Number(number2);
+
 
         document.getElementById('equation').innerText = equation;        
 
@@ -115,45 +164,82 @@ function generateEquation() {
         }
     }
     else if(operationType == 2){
-        let number1; 
-        let number2; 
-
-        if(onlyLevel == 1){
-            number1 = Math.floor(Math.random() * 4);
-            number2 = Math.floor(Math.random() * 4);
-        }else if(onlyLevel == 2){
-            number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-        }else if(onlyLevel == 3){
-            if(level == 1){
-                number1 = Math.floor(Math.random() * 4);
-                number2 = Math.floor(Math.random() * 4);
-            }else if(level == 2){
-                number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-            }else if(level == 3){
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            } 
-            else{
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            }           
-        }
-
-        operators = ['+', '-', '*', '/'];
-        const operator = operators[operationType];  
+        let number1 = Math.floor(Math.random() * 2 * level) + 1;
+        let number2 = Math.floor(Math.random() * 2 * level) + 1;
         
-        if (operator == '*' && level == 1) {
-            while (number2 > 5) {
-                number2 = Math.floor(Math.random() * 6) + 0;
-            };
-        }else if (operator == '*' && level == 2) {
-            while (number2 > 10) {
-                number2 = Math.floor(Math.random() * 10) + 0;
-            };
-        }
+        operators = ['+', '-', '*', '/'];
+        const operator = operators[operationType]; 
+        
+        switch(level){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);
+                    do{
+                        number1 = Math.floor(Math.random() * 3);
+                        number2 = Math.floor(Math.random() * 3);
+                    }while(number1 * number2 > 6);                   
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                    do{
+                        number1 = Math.floor(Math.random() * 4);
+                        number2 = Math.floor(Math.random() * 4);
+                    }while(number1 * number2 > 10);  
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                    do{
+                        number1 = Math.floor(Math.random() * 5);
+                        number2 = Math.floor(Math.random() * 5);
+                    }while(number1 * number2 > 16);  
+                break;
+            case 4: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                    do{
+                        number1 = Math.floor(Math.random() * 6);
+                        number2 = Math.floor(Math.random() * 6);
+                    }while(number1 * number2 > 30);  
+                break;            
+        };
 
+        switch(onlyLevel){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);
+                    do{
+                        number1 = Math.floor(Math.random() * 3);
+                        number2 = Math.floor(Math.random() * 3);
+                    }while(number1 * number2 > 6);                   
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                    do{
+                        number1 = Math.floor(Math.random() * 4);
+                        number2 = Math.floor(Math.random() * 4);
+                    }while(number1 * number2 > 10);  
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                    do{
+                        number1 = Math.floor(Math.random() * 5);
+                        number2 = Math.floor(Math.random() * 5);
+                    }while(number1 * number2 > 16);  
+                break;
+            case 4: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                    do{
+                        number1 = Math.floor(Math.random() * 6);
+                        number2 = Math.floor(Math.random() * 6);
+                    }while(number1 * number2 > 30);  
+                break;           
+        };
+       
         let equation = number1 + " " + operator + " " + number2 + ' = ?';
         equationTxt = `${number1} ${operator} ${number2}`;
 
@@ -163,48 +249,61 @@ function generateEquation() {
 
         if (!Number.isInteger(correctAnswer) || correctAnswer < 0) {
             generateEquation();
-        }
+        }    
     }
     else if(operationType == 3){
         let number1; 
         let number2; 
 
-        if(onlyLevel == 1){
-            number1 = Math.floor(Math.random() * 4);
-            number2 = Math.floor(Math.random() * 4);
-        }else if(onlyLevel == 2){
-            number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-        }else if(onlyLevel == 3){
-            if(level == 1){
-                number1 = Math.floor(Math.random() * 4);
-                number2 = Math.floor(Math.random() * 4);
-            }else if(level == 2){
-                number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-            }else if(level == 3){
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            } 
-            else{
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            }           
-        }
-
         operators = ['+', '-', '*', '/'];
-        const operator = operators[operationType];  
-        
-        if (operator == '/') {
-            while (number2 > 5) {
-                number2 = Math.floor(Math.random() * 6) + 1;
-            };
-        }else if (operator == '/' && level == 2) {
-            while (number2 > 10) {
-                number2 = Math.floor(Math.random() * 10) + 1;
-            };
-        }
+        const operator = operators[operationType];
 
+        switch(level){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };
+
+        switch(onlyLevel){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);                    
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                break;
+            default:
+                    number1 = Math.floor(Math.random() * 2 * level) + 1;
+                    number2 = Math.floor(Math.random() * 2 * level) + 1;
+                break;
+        };        
+       
         if (operator == '/' && number1 < number2) {
             let temp = number1;
             number1 = number2;
@@ -223,51 +322,97 @@ function generateEquation() {
         }    
     }  
     else{
-        let number1; 
-        let number2; 
-
-        if(onlyLevel == 1){
-            number1 = Math.floor(Math.random() * 4);
-            number2 = Math.floor(Math.random() * 4);
-        }else if(onlyLevel == 2){
-            number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-        }else if(onlyLevel == 3){
-            if(level == 1){
-                number1 = Math.floor(Math.random() * 4);
-                number2 = Math.floor(Math.random() * 4);
-            }else if(level == 2){
-                number1 = Math.floor(Math.random() * 6);
-            number2 = Math.floor(Math.random() * 6);
-            }else if(level == 3){
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            } 
-            else{
-                number1 = Math.floor(Math.random() * 3 * level) + 1;
-                number2 = Math.floor(Math.random() * 3 * level) + 1;
-            }           
-        }
+        let number1 = Math.floor(Math.random() * 2 * level) + 1;
+        let number2 = Math.floor(Math.random() * 2 * level) + 1;
 
         operators = ['+', '-', '*', '/'];
         const operator = operators[Math.floor(Math.random() * operators.length)];
+        console.log('MNOŻENIE')
 
-        if (operator == '*' && (level == 1 || onlyLevel == 1)) {
-            while (number2 > 5) {
-                number2 = Math.floor(Math.random() * 3) + 0;
-            };
-        } else if (operator == '/' && (level == 1 || onlyLevel == 1)) {
-            while (number2 > 5) {
-                number2 = Math.floor(Math.random() * 3) + 1;
-            };
-        } else if (operator == '*' && (level == 2 || onlyLevel == 2)) {
-            while (number2 > 10) {
-                number2 = Math.floor(Math.random() * 5) + 0;
-            };
-        } else if (operator == '/' && (level == 2 || onlyLevel == 2)) {
-            while (number2 > 10) {
-                number2 = Math.floor(Math.random() * 5) + 1;
-            };
+        switch(level){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 3);
+                            number2 = Math.floor(Math.random() * 3);
+                        }while(number1 * number2 > 6); 
+                    }                     
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 4);
+                            number2 = Math.floor(Math.random() * 4);
+                        }while(number1 * number2 > 10); 
+                    }   
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 5);
+                            number2 = Math.floor(Math.random() * 5);
+                        }while(number1 * number2 > 16); 
+                    }    
+                break;
+            case 4: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 6);
+                            number2 = Math.floor(Math.random() * 6);
+                        }while(number1 * number2 > 30); 
+                    }                     
+                break;           
+        };
+
+        switch(onlyLevel){
+            case 1: 
+                    number1 = Math.floor(Math.random() * 3);
+                    number2 = Math.floor(Math.random() * 3);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 3);
+                            number2 = Math.floor(Math.random() * 3);
+                        }while(number1 * number2 > 6); 
+                    }                     
+                break;
+            case 2: 
+                    number1 = Math.floor(Math.random() * 4);
+                    number2 = Math.floor(Math.random() * 4);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 4);
+                            number2 = Math.floor(Math.random() * 4);
+                        }while(number1 * number2 > 10); 
+                    }   
+                break;
+            case 3: 
+                    number1 = Math.floor(Math.random() * 5);
+                    number2 = Math.floor(Math.random() * 5);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 5);
+                            number2 = Math.floor(Math.random() * 5);
+                        }while(number1 * number2 > 16); 
+                    }    
+                break;
+            case 4: 
+                    number1 = Math.floor(Math.random() * 6);
+                    number2 = Math.floor(Math.random() * 6);
+                    if(operator == '*'){
+                        do{
+                            number1 = Math.floor(Math.random() * 6);
+                            number2 = Math.floor(Math.random() * 6);
+                        }while(number1 * number2 > 30); 
+                    }                     
+                break;            
         };
 
         if (operator == '/' && number1 < number2) {
@@ -276,8 +421,8 @@ function generateEquation() {
             number2 = temp;
         }
 
-        let equation = number1 + " " + operator + " " + number2 + ' = ?';
-        equationTxt = `${number1} ${operator} ${number2}`;
+        let equation = number1 + " " + operator + " " + number2 + ' = ?';  
+        equationTxt = `${number1} ${operator} ${number2}`;    
 
         document.getElementById('equation').innerText = equation;
 
@@ -289,16 +434,17 @@ function generateEquation() {
                 correctAnswer = Number(number1) - Number(number2)
                 break;
             case '*':
-                correctAnswer = Number(number1) * Number(number2)
+                correctAnswer = Number(number1) * Number(number2)                
                 break;
             case '/':
                 correctAnswer = Number(number1) / Number(number2)
                 break;
-        }
+        }        
 
         if (!Number.isInteger(correctAnswer) || correctAnswer < 0) {
             generateEquation();    
-        } 
+        }
+       
     }
 }       
 
@@ -453,7 +599,7 @@ function timerInterval(){
         }
         
 
-        if(onlyLevel == 3){
+        if(onlyLevel == 5){
             document.getElementById('level').innerText = 'wzrastający: ' + level;
         }else{
             document.getElementById('level').innerText = 'tylko poziom ' + onlyLevel;
@@ -514,8 +660,18 @@ document.getElementById('all-operation').addEventListener('click', function(e){
     console.log('only level ' + onlyLevel)
     startNewGame();
   });
-  document.getElementById('raising-level').addEventListener('click', function(e){
+  document.getElementById('third-level').addEventListener('click', function(e){
     onlyLevel = 3;
+    console.log('only level ' + onlyLevel)
+    startNewGame();
+  });
+  document.getElementById('fourth-level').addEventListener('click', function(e){
+    onlyLevel = 4;
+    console.log('only level ' + onlyLevel)
+    startNewGame();
+  });
+  document.getElementById('raising-level').addEventListener('click', function(e){
+    onlyLevel = 5;
     startNewGame();
   });
 
