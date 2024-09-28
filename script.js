@@ -370,10 +370,7 @@ function checkAnswer() {
             document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
             document.getElementById('answer-information').textContent = `${equationTxt} = ${correctAnswer}`;
             document.getElementById('answer-score-information').textContent = '-1 Serduszko!';
-
-            if(score != 0){
-                score--;
-            }
+            
             lifes--;            
             document.getElementById('lifes').innerText = "Koniec gry"; 
         } else {
@@ -386,9 +383,7 @@ function checkAnswer() {
             document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
             document.getElementById('answer-information').textContent = `${equationTxt} = ${correctAnswer}`;
             document.getElementById('answer-score-information').textContent = '-1 Serduszko!';
-            if(score != 0){
-                score--;
-            }
+          
             lifes--;
             generateEquation();
             document.getElementById('answer').value = '';
