@@ -347,8 +347,8 @@ function checkAnswer() {
         document.getElementById('answer-information-container').style.display = 'flex';
         document.getElementById('answer-information-container').style.backgroundColor  = 'rgb(82, 206, 82)'; 
         document.getElementById('happy-face').style.display = 'flex';
-        document.getElementById('answer-information').textContent = 'Poprawna odpowiedź! Brawo!';
-        document.getElementById('answer-information').textContent = `${equationTxt} = ${correctAnswer}`;
+        //document.getElementById('answer-information').textContent = '!';
+        document.getElementById('answer-information').innerHTML = `Dobra odpowiedź! Brawo! <br>Poprawne rozwiąznie: ${equationTxt} = ${correctAnswer}`;
         document.getElementById('answer-score-information').textContent = '+1 PUNKT!';
         score++;
         document.getElementById('score').innerText = score;
@@ -367,8 +367,8 @@ function checkAnswer() {
             document.getElementById('answer-information-container').style.display = 'flex'; 
             document.getElementById('answer-information-container').style.backgroundColor  = 'rgb(255, 81, 0)';             
             document.getElementById('sad-face').style.display = 'flex';
-            document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
-            document.getElementById('answer-information').textContent = `${equationTxt} = ${correctAnswer}`;
+            //document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
+            document.getElementById('answer-information').innerHTML = `Twoja odpowiedź jest błędna. <br>Poprawna odpowiedź to: ${equationTxt} = ${correctAnswer}`;
             document.getElementById('answer-score-information').textContent = '-1 Serduszko!';
             
             lifes--;            
@@ -380,8 +380,8 @@ function checkAnswer() {
             document.getElementById('answer-information-container').style.display = 'flex';
             document.getElementById('answer-information-container').style.backgroundColor  = 'rgb(255, 81, 0)'; 
             document.getElementById('sad-face').style.display = 'flex';
-            document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
-            document.getElementById('answer-information').textContent = `${equationTxt} = ${correctAnswer}`;
+            //document.getElementById('answer-information').textContent = 'ZŁA ODPOWIEDŹ!';
+            document.getElementById('answer-information').innerHTML = `Twoja odpowiedź jest błędna. <br>Poprawna odpowiedź to: ${equationTxt} = ${correctAnswer}`;
             document.getElementById('answer-score-information').textContent = '-1 Serduszko!';
           
             lifes--;
